@@ -1,0 +1,29 @@
+[
+  {
+      "category": "Дом",
+      "name": "Стул Топ",
+      "image": "products_imges/product-2.jpg",
+      "short_desc": "Удобный стул",
+      "description": "Очень удобный стулл",
+      "price": "1000.00",
+      "quantity": 20
+  },
+  {
+      "category": "Офис",
+      "name": "Стол",
+      "image": "products_imges/slider-hotdeal.jpg",
+      "short_desc": "Тупо топ",
+      "description": "Тупо топ стол",
+      "price": "20000.00",
+      "quantity": 4
+  },
+  {
+      "category": "Дом",
+      "name": "Модерн стул",
+      "image": "products_imges/product-4.jpg",
+      "short_desc": "Стильный дизайн",
+      "description": "Модерн стайл стул",
+      "price": "3400.00",
+      "quantity": 30
+  }
+]
