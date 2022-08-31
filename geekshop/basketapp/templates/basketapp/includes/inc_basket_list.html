@@ -16,5 +16,6 @@
     <td colspan="2" class="basket_summary">
         В корзине {{ basket.0.total_quantity }} товаров общей стоимостью
         {{ basket.0.total_cost }} руб
+        <a href="{% url 'ordersapp:order_create' %}">Перейти к оформлению заказа</a>
     </td>
 {% endif %}
