@@ -104,12 +104,12 @@ def products(request, pk=None, page=1):
     if pk is not None:
         if pk == 0:
             category = {'pk': 0, 'name': 'все'}
-            products = get_products_in_category_orederd_by_price(pk)
+            products = Product.objects.filter(is_active=True, category__is_active=True).order_by('price')
         else:
             category = get_category(pk)
             products = get_products_in_category_orederd_by_price(pk)
 
-        paginator = Paginator(products, 2)
+        paginator = Paginator(products, 3)
         try:
             products_paginator = paginator.page(page)
         except PageNotAnInteger:
@@ -123,11 +123,13 @@ def products(request, pk=None, page=1):
             'category': category,
             'products': products_paginator,
         }
+        print('pog+')
         return render(request, 'mainapp/products.html', context)
 
     hot_product = get_hot_product()
     same_products = get_same_products(hot_product)
     products = get_products_order_by_price()
+
 
     context = {
         'title': title,
@@ -136,7 +138,7 @@ def products(request, pk=None, page=1):
         'same_products': same_products,
         'products': products,
     }
-
+    print('pog-')
     return render(request, 'mainapp/products.html', context)
 
 
