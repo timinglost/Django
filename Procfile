@@ -1,1 +1,1 @@
-web: gunicorn geekshop:app
+web: gunicorn geekshop:app --log-file -
