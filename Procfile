@@ -1,1 +1,1 @@
-web: sh -c 'cd geekshop && gunicorn geekshop.wsgi --log-file -
+web: sh -c 'cd geekshop && gunicorn geekshop.wsgi --log-file -'
