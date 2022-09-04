@@ -62,6 +62,7 @@ AUTHENTICATION_BACKENDS = (
 MIDDLEWARE = [
     # 'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', #del
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -165,6 +166,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "geekshop", "static"),
 )
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage" #del
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
