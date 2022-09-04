@@ -174,7 +174,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage" #del
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage" #del
 LOGIN_URL = '/auth/login/'
 
 DOMAIN_NAME = 'http://localhost:8000'
